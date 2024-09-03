@@ -64,11 +64,11 @@ The multiexponentiations are still the bottleneck and optimization efforts shoul
 
 #### G1 multiexponentiation
 
-- The [current best implementation](https://github.com/CodaProtocol/gpu-groth16-prover-3x/blob/master/multiexp/reduce.cu#L49) performs a "map-reduce" to implement the multiexponentiation with a batched double-and-add being the base multiexponentiation "map" function. The Pippenger algorithm ([described here](https://pdfs.semanticscholar.org/486e/573e23ad21623d6f4f7ff035b77e1db7b835.pdf) and implemented for another curve [here](https://github.com/matter-labs/belle_cuda/blob/master/sources/multiexp.cu) is likely to be significantly faster.
+- The [current best implementation](https://github.com/CodaProtocol/gpu-groth16-prover-3x/blob/master/multiexp/reduce.cu#L49) performs a "map-reduce" to implement the multiexponentiation with a batched double-and-add being the base multiexponentiation "map" function. The Pippenger algorithm ([described here](https://pdfs.semanticscholar.org/486e/573e23ad21623d6f4f7ff035b77e1db7b835.pdf) and implemented for another curve [here](https://github.com/matter-labs/belle_cuda/blob/master/sources/multiexp.cu) )is likely to be significantly faster.
 
 #### G2 multiexponentiation
 
-- The above remarks about the Pippenger algorithm also apply here. To repeat, the [current best implementation](https://github.com/CodaProtocol/gpu-groth16-prover-3x/blob/master/multiexp/reduce.cu#L49) performs a "map-reduce" to implement the multiexponentiation with a batched double-and-add being the base multiexponentiation "map" function. The Pippenger algorithm ([described here](https://pdfs.semanticscholar.org/486e/573e23ad21623d6f4f7ff035b77e1db7b835.pdf) and implemented for another curve [here](https://github.com/matter-labs/belle_cuda/blob/master/sources/multiexp.cu) is likely to be significantly faster.
+- The above remarks about the Pippenger algorithm also apply here. To repeat, the [current best implementation](https://github.com/CodaProtocol/gpu-groth16-prover-3x/blob/master/multiexp/reduce.cu#L49) performs a "map-reduce" to implement the multiexponentiation with a batched double-and-add being the base multiexponentiation "map" function. The Pippenger algorithm ([described here](https://pdfs.semanticscholar.org/486e/573e23ad21623d6f4f7ff035b77e1db7b835.pdf) and implemented for another curve [here](https://github.com/matter-labs/belle_cuda/blob/master/sources/multiexp.cu)) is likely to be significantly faster.
 
 - The technique in [this paper](https://eprint.iacr.org/2008/117.pdf) can be used to speed up the G2 multi-exponentiation by about 2x.
 
